@@ -1,0 +1,9 @@
+img=imread('Test_Images/test.png');
+Img=enhance_image(img);
+feat_test=extract5features(Img,'test');
+class1=Train('Train_Images/01.jpeg','Train_Images/02.jpg','Train_Images/03.jpg');
+class2=Train('Train_Images/11.jpg','Train_Images/12.jpg','Train_Images/13.jpg');
+class3=Train('Train_Images/21.jpg','Train_Images/22.jpg','Train_Images/23.jpg');
+class4=Train('Train_Images/31.jpg','Train_Images/32.jpg','Train_Images/33.jpg');
+class5=Train('Train_Images/41.jpg','Train_Images/42.jpg','Train_Images/43.jpg');
+disp(Classify(feat_test,class1,class2,class3,class4,class5));
